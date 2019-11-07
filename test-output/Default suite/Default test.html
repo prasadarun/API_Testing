@@ -1,0 +1,1124 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>48/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Nov 06 18:15:02 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>51 seconds (51875 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B2&", "&E2&"' City Info", Bangalore, 17e5c69afcef0f16365a6c3b0cba4400, 300, IN<br/>
+<a href="#Output-1857910993" onClick='toggleBox("Output-1857910993", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1857910993" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1857910993">
+Test_Case_Name is : "Verify '"&B2&", "&E2&"' City Info"<br/>
+Response is : {"coord":{"lon":77.6,"lat":12.98},"weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02n"}],"base":"stations","main":{"temp":301.74,"pressure":1011,"humidity":48,"temp_min":300.15,"temp_max":303.15},"visibility":6000,"wind":{"speed":2.83,"deg":353},"clouds":{"all":20},"dt":1573043935,"sys":{"type":1,"id":9205,"country":"IN","sunrise":1573001078,"sunset":1573042906},"timezone":19800,"id":1277333,"name":"Bangalore","cod":200}<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;300&gt; but was &lt;200&gt;.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:492)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:125)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:133)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases(DataProviderWeatherAPI.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1857910993", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1857910993'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;300&gt; but was &lt;200&gt;.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:492)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:125)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:133)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases(DataProviderWeatherAPI.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>17</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B3&", "&E3&"' City Info", Delhi, 17e5c69afcef0f16365a6c3b0cba4400, 200, US<br/>
+<a href="#Output-22668134" onClick='toggleBox("Output-22668134", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-22668134" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-22668134">
+Test_Case_Name is : "Verify '"&B3&", "&E3&"' City Info"<br/>
+Response is : {"coord":{"lon":77.22,"lat":28.65},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":299.95,"pressure":1008,"humidity":36,"temp_min":299.82,"temp_max":300.15},"visibility":2800,"wind":{"speed":1.5,"deg":120},"clouds":{"all":40},"dt":1573043709,"sys":{"type":1,"id":9165,"country":"IN","sunrise":1573002383,"sunset":1573041783},"timezone":19800,"id":1273294,"name":"Delhi","cod":200}<br/>
+Verified the status code successfully<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path sys.country doesn&apos;t match.
+Expected: a string equal to &quot;US&quot; ignoring case
+  Actual: IN
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:492)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:260)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:107)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases(DataProviderWeatherAPI.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace22668134", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace22668134'><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path sys.country doesn&apos;t match.
+Expected: a string equal to &quot;US&quot; ignoring case
+  Actual: IN
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:492)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:260)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:107)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases(DataProviderWeatherAPI.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>4</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: , Bang City, 17e5c69afcef0f16365a6c3b0cba4400, 404, IN, city not found<br/>
+<a href="#Output-1609754699" onClick='toggleBox("Output-1609754699", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1609754699" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1609754699">
+Response is: {"cod":"404","message":"city not found"}<br/>
+Test_Case_Name is : <br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B3&", "&E3&"' City Info", ABC1, 17e5c69afcef0f16365a6c3b0cba4400, 404, IN, city not found<br/>
+<a href="#Output-179441020" onClick='toggleBox("Output-179441020", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-179441020" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-179441020">
+Response is: {"cod":"404","message":"city not found"}<br/>
+Test_Case_Name is : "Verify '"&B3&", "&E3&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B4&", "&E4&"' City Info", ABC2, 17e5c69afcef0f16365a6c3b0cba4400, 404, IN, city not found<br/>
+<a href="#Output-885991756" onClick='toggleBox("Output-885991756", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-885991756" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-885991756">
+Response is: {"cod":"404","message":"city not found"}<br/>
+Test_Case_Name is : "Verify '"&B4&", "&E4&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B5&", "&E5&"' City Info", ABC3, 17e5c69afcef0f16365a6c3b0cba4400, 404, IN, city not found<br/>
+<a href="#Output-48428832" onClick='toggleBox("Output-48428832", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-48428832" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-48428832">
+Response is: {"cod":"404","message":"city not found"}<br/>
+Test_Case_Name is : "Verify '"&B5&", "&E5&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B6&", "&E6&"' City Info", ABC4, 17e5c69afcef0f16365a6c3b0cba4400, 404, IN, city not found<br/>
+<a href="#Output-1253396693" onClick='toggleBox("Output-1253396693", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1253396693" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1253396693">
+Response is: {"cod":"404","message":"city not found"}<br/>
+Test_Case_Name is : "Verify '"&B6&", "&E6&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B7&", "&E7&"' City Info", ABC5, 17e5c69afcef0f16365a6c3b0cba4400, 404, IN, city not found<br/>
+<a href="#Output-2048888303" onClick='toggleBox("Output-2048888303", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2048888303" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2048888303">
+Response is: {"cod":"404","message":"city not found"}<br/>
+Test_Case_Name is : "Verify '"&B7&", "&E7&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B8&", "&E8&"' City Info", ABC6, 17e5c69afcef0f16365a6c3b0cba4400, 404, IN, city not found<br/>
+<a href="#Output-1349373781" onClick='toggleBox("Output-1349373781", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1349373781" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1349373781">
+Response is: {"cod":"404","message":"city not found"}<br/>
+Test_Case_Name is : "Verify '"&B8&", "&E8&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B9&", "&E9&"' City Info", ABC7, 17e5c69afcef0f16365a6c3b0cba4400, 404, IN, city not found<br/>
+<a href="#Output-1681993012" onClick='toggleBox("Output-1681993012", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1681993012" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1681993012">
+Response is: {"cod":"404","message":"city not found"}<br/>
+Test_Case_Name is : "Verify '"&B9&", "&E9&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B10&", "&E10&"' City Info", ABC8, 17e5c69afcef0f16365a6c3b0cba4400, 404, IN, city not found<br/>
+<a href="#Output-1881218633" onClick='toggleBox("Output-1881218633", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1881218633" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1881218633">
+Response is: {"cod":"404","message":"city not found"}<br/>
+Test_Case_Name is : "Verify '"&B10&", "&E10&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B11&", "&E11&"' City Info", Tirupati, 17e5c69afcef0f16365a6c, 401, IN, Invalid API key<br/>
+<a href="#Output-1058921154" onClick='toggleBox("Output-1058921154", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1058921154" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1058921154">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B11&", "&E11&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B12&", "&E12&"' City Info", Bangalore, 17e5c69afcef0f16365a6c, 401, IN, Invalid API key<br/>
+<a href="#Output-1269819701" onClick='toggleBox("Output-1269819701", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1269819701" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1269819701">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B12&", "&E12&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B13&", "&E13&"' City Info", Delhi, 17e5c69afcef0f16365a6c, 401, IN, Invalid API key<br/>
+<a href="#Output-1202547191" onClick='toggleBox("Output-1202547191", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1202547191" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1202547191">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B13&", "&E13&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B14&", "&E14&"' City Info", Agra, 17e5c69afcef0f16365a6c, 401, IN, Invalid API key<br/>
+<a href="#Output-1604020967" onClick='toggleBox("Output-1604020967", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1604020967" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1604020967">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B14&", "&E14&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B15&", "&E15&"' City Info", Bareilly, 17e5c69afcef0fb0cba4400, 401, IN, Invalid API key<br/>
+<a href="#Output-1920321355" onClick='toggleBox("Output-1920321355", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1920321355" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1920321355">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B15&", "&E15&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B16&", "&E16&"' City Info", Indore, 17e5c69afcef0fb0cba4400, 401, IN, Invalid API key<br/>
+<a href="#Output-608108604" onClick='toggleBox("Output-608108604", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-608108604" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-608108604">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B16&", "&E16&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B17&", "&E17&"' City Info", Mumbai, 17e5c69afcef0fb0cba4400, 401, IN, Invalid API key<br/>
+<a href="#Output-1831717330" onClick='toggleBox("Output-1831717330", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1831717330" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1831717330">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B17&", "&E17&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B18&", "&E18&"' City Info", Gurgaon, 17e5c69afcef0fb0cba4400, 401, IN, Invalid API key<br/>
+<a href="#Output-947173397" onClick='toggleBox("Output-947173397", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-947173397" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-947173397">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B18&", "&E18&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B19&", "&E19&"' City Info", Manchester, 69afcef0f16365a6c3b0cba4400, 401, US, Invalid API key<br/>
+<a href="#Output-635068762" onClick='toggleBox("Output-635068762", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-635068762" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-635068762">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B19&", "&E19&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B20&", "&E20&"' City Info", Birmingham, 69afcef0f16365a6c3b0cba4400, 401, GB, Invalid API key<br/>
+<a href="#Output-745966298" onClick='toggleBox("Output-745966298", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-745966298" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-745966298">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B20&", "&E20&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithNegativeTestCases()'><b>getWeatherInfoWithNegativeTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B21&", "&E21&"' City Info", Glasgow, 69afcef0f16365a6c3b0cba4400, 401, GB, Invalid API key<br/>
+<a href="#Output-665641137" onClick='toggleBox("Output-665641137", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-665641137" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-665641137">
+Response is: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}<br/>
+Test_Case_Name is : "Verify '"&B21&", "&E21&"' City Info"<br/>
+Verified the error Messages Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '" & B4 &  ", "&E4 & "' City Info", Agra, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-797416363" onClick='toggleBox("Output-797416363", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-797416363" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-797416363">
+Test_Case_Name is : "Verify '" & B4 &  ", "&E4 & "' City Info"<br/>
+Response is : {"coord":{"lon":78.01,"lat":27.18},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04n"}],"base":"model","main":{"temp":300.31,"pressure":1007,"humidity":33,"temp_min":300.31,"temp_max":300.31,"sea_level":1007,"grnd_level":989},"wind":{"speed":0.51,"deg":9},"clouds":{"all":100},"dt":1573044069,"sys":{"country":"IN","sunrise":1573002067,"sunset":1573041720},"timezone":19800,"id":1279259,"name":"Agra","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B5&", "&E5&"' City Info", Bareilly, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-1753259207" onClick='toggleBox("Output-1753259207", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1753259207" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1753259207">
+Test_Case_Name is : "Verify '"&B5&", "&E5&"' City Info"<br/>
+Response is : {"coord":{"lon":79.41,"lat":28.35},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"model","main":{"temp":298.08,"pressure":1007,"humidity":36,"temp_min":298.08,"temp_max":298.08,"sea_level":1007,"grnd_level":987},"wind":{"speed":1.76,"deg":309},"clouds":{"all":4},"dt":1573044109,"sys":{"country":"IN","sunrise":1573001831,"sunset":1573041284},"timezone":19800,"id":1277013,"name":"Bareilly","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B6&", "&E6&"' City Info", Indore, 17e5c69afcef0f16365a6c3b0cba4400, 200, US<br/>
+<a href="#Output-329481770" onClick='toggleBox("Output-329481770", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-329481770" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-329481770">
+Test_Case_Name is : "Verify '"&B6&", "&E6&"' City Info"<br/>
+Response is : {"coord":{"lon":-81.15,"lat":38.35},"weather":[{"id":741,"main":"Fog","description":"fog","icon":"50d"}],"base":"stations","main":{"temp":273.9,"pressure":1032,"humidity":100,"temp_min":272.59,"temp_max":275.37},"visibility":201,"wind":{"speed":0.83,"deg":198},"clouds":{"all":90},"dt":1573044179,"sys":{"type":1,"id":3707,"country":"US","sunrise":1573041361,"sunset":1573078825},"timezone":-18000,"id":4802333,"name":"Indore","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B7&", "&E7&"' City Info", Mumbai, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-1970856042" onClick='toggleBox("Output-1970856042", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1970856042" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1970856042">
+Test_Case_Name is : "Verify '"&B7&", "&E7&"' City Info"<br/>
+Response is : {"coord":{"lon":72.85,"lat":19.01},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":304.34,"pressure":1007,"humidity":66,"temp_min":303.15,"temp_max":306.48},"visibility":3500,"wind":{"speed":4.6,"deg":290},"clouds":{"all":20},"dt":1573043699,"sys":{"type":1,"id":9052,"country":"IN","sunrise":1573002657,"sunset":1573043606},"timezone":19800,"id":1275339,"name":"Mumbai","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B8&", "&E8&"' City Info", Gurgaon, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-1273895132" onClick='toggleBox("Output-1273895132", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1273895132" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1273895132">
+Test_Case_Name is : "Verify '"&B8&", "&E8&"' City Info"<br/>
+Response is : {"coord":{"lon":77.03,"lat":28.47},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":299.96,"pressure":1008,"humidity":36,"temp_min":299.82,"temp_max":300.15},"visibility":2800,"wind":{"speed":1.5,"deg":120},"clouds":{"all":40},"dt":1573044179,"sys":{"type":1,"id":9165,"country":"IN","sunrise":1573002413,"sunset":1573041844},"timezone":19800,"id":1270642,"name":"Gurgaon","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B9&", "&E9&"' City Info", Noida, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-466577384" onClick='toggleBox("Output-466577384", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-466577384" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-466577384">
+Test_Case_Name is : "Verify '"&B9&", "&E9&"' City Info"<br/>
+Response is : {"coord":{"lon":77.35,"lat":28.57},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":299.95,"pressure":1008,"humidity":36,"temp_min":299.82,"temp_max":300.15},"visibility":2800,"wind":{"speed":1.5,"deg":120},"clouds":{"all":40},"dt":1573044180,"sys":{"type":1,"id":9165,"country":"IN","sunrise":1573002345,"sunset":1573041759},"timezone":19800,"id":7279746,"name":"Noida","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B10&", "&E10&"' City Info", Mysore, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-356691811" onClick='toggleBox("Output-356691811", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-356691811" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-356691811">
+Test_Case_Name is : "Verify '"&B10&", "&E10&"' City Info"<br/>
+Response is : {"coord":{"lon":76.65,"lat":12.31},"weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02n"}],"base":"stations","main":{"temp":302.15,"pressure":1012,"humidity":58,"temp_min":302.15,"temp_max":302.15},"visibility":6000,"wind":{"speed":3.1,"deg":140},"clouds":{"all":20},"dt":1573044180,"sys":{"type":1,"id":9212,"country":"IN","sunrise":1573001259,"sunset":1573043181},"timezone":19800,"id":1262321,"name":"Mysore","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B11&", "&E11&"' City Info", Satna, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-2090894907" onClick='toggleBox("Output-2090894907", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2090894907" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2090894907">
+Test_Case_Name is : "Verify '"&B11&", "&E11&"' City Info"<br/>
+Response is : {"coord":{"lon":80.83,"lat":24.58},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"model","main":{"temp":298.25,"pressure":1009,"humidity":36,"temp_min":298.25,"temp_max":298.25,"sea_level":1009,"grnd_level":971},"wind":{"speed":3.23,"deg":6},"clouds":{"all":0},"dt":1573044181,"sys":{"country":"IN","sunrise":1573001175,"sunset":1573041258},"timezone":19800,"id":1257022,"name":"Satna","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B12&", "&E12&"' City Info", Tirupati, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-1523034648" onClick='toggleBox("Output-1523034648", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1523034648" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1523034648">
+Test_Case_Name is : "Verify '"&B12&", "&E12&"' City Info"<br/>
+Response is : {"coord":{"lon":79.42,"lat":13.63},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":304.15,"pressure":1007,"humidity":48,"temp_min":304.15,"temp_max":304.15},"visibility":4000,"wind":{"speed":2.6,"deg":110},"clouds":{"all":20},"dt":1573044181,"sys":{"type":1,"id":9219,"country":"IN","sunrise":1573000687,"sunset":1573042423},"timezone":19800,"id":1254360,"name":"Tirupati","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B13&", "&E13&"' City Info", Patna, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-1239132915" onClick='toggleBox("Output-1239132915", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1239132915" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1239132915">
+Test_Case_Name is : "Verify '"&B13&", "&E13&"' City Info"<br/>
+Response is : {"coord":{"lon":85.12,"lat":25.61},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":299.15,"pressure":1008,"humidity":54,"temp_min":299.15,"temp_max":299.15},"visibility":2500,"wind":{"speed":2.54,"deg":234},"clouds":{"all":0},"dt":1573044182,"sys":{"type":1,"id":9129,"country":"IN","sunrise":1573000229,"sunset":1573040145},"timezone":19800,"id":1260086,"name":"Patna","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B14&", "&E14&"' City Info", Kolkata, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-1625111587" onClick='toggleBox("Output-1625111587", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1625111587" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1625111587">
+Test_Case_Name is : "Verify '"&B14&", "&E14&"' City Info"<br/>
+Response is : {"coord":{"lon":88.35,"lat":22.57},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":300.15,"pressure":1007,"humidity":65,"temp_min":300.15,"temp_max":300.15},"visibility":3000,"wind":{"speed":2.1,"deg":320},"clouds":{"all":40},"dt":1573044146,"sys":{"type":1,"id":9114,"country":"IN","sunrise":1572999209,"sunset":1573039614},"timezone":19800,"id":1275004,"name":"Kolkata","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B15&", "&E15&"' City Info", Ooty, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-1697298649" onClick='toggleBox("Output-1697298649", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1697298649" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1697298649">
+Test_Case_Name is : "Verify '"&B15&", "&E15&"' City Info"<br/>
+Response is : {"coord":{"lon":76.7,"lat":11.41},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":303.15,"pressure":1009,"humidity":62,"temp_min":303.15,"temp_max":303.15},"visibility":5000,"wind":{"speed":2.6,"deg":140},"clouds":{"all":20},"dt":1573044183,"sys":{"type":1,"id":9206,"country":"IN","sunrise":1573001183,"sunset":1573043232},"timezone":19800,"id":1253993,"name":"Ooty","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B16&", "&E16&"' City Info", Hyderabad, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-2122256138" onClick='toggleBox("Output-2122256138", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2122256138" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2122256138">
+Test_Case_Name is : "Verify '"&B16&", "&E16&"' City Info"<br/>
+Response is : {"coord":{"lon":78.47,"lat":17.36},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03n"}],"base":"stations","main":{"temp":300.42,"pressure":1012,"humidity":78,"temp_min":300.15,"temp_max":300.93},"visibility":6000,"wind":{"speed":1},"clouds":{"all":40},"dt":1573044026,"sys":{"type":1,"id":9214,"country":"IN","sunrise":1573001185,"sunset":1573042381},"timezone":19800,"id":1269843,"name":"Hyderabad","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B17&", "&E17&"' City Info", Lucknow, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-1538745405" onClick='toggleBox("Output-1538745405", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1538745405" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1538745405">
+Test_Case_Name is : "Verify '"&B17&", "&E17&"' City Info"<br/>
+Response is : {"coord":{"lon":80.93,"lat":26.84},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":296.15,"pressure":1009,"humidity":78,"temp_min":296.15,"temp_max":296.15},"visibility":2000,"wind":{"speed":1.5,"deg":320},"clouds":{"all":75},"dt":1573044169,"sys":{"type":1,"id":9176,"country":"IN","sunrise":1573001337,"sunset":1573041048},"timezone":19800,"id":1264733,"name":"Lucknow","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B18&", "&E18&"' City Info", Hisar, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-117249632" onClick='toggleBox("Output-117249632", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-117249632" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-117249632">
+Test_Case_Name is : "Verify '"&B18&", "&E18&"' City Info"<br/>
+Response is : {"coord":{"lon":75.73,"lat":29.16},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"model","main":{"temp":301.72,"pressure":1005,"humidity":23,"temp_min":301.72,"temp_max":301.72,"sea_level":1005,"grnd_level":982},"wind":{"speed":1.54,"deg":130},"clouds":{"all":0},"dt":1573044184,"sys":{"country":"IN","sunrise":1573002785,"sunset":1573042096},"timezone":19800,"id":1270022,"name":"Hisar","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B19&", "&E19&"' City Info", Ahmedabad, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-1929661663" onClick='toggleBox("Output-1929661663", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1929661663" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1929661663">
+Test_Case_Name is : "Verify '"&B19&", "&E19&"' City Info"<br/>
+Response is : {"coord":{"lon":72.58,"lat":23.02},"weather":[{"id":711,"main":"Smoke","description":"smoke","icon":"50n"}],"base":"stations","main":{"temp":304.15,"pressure":1007,"humidity":58,"temp_min":304.15,"temp_max":304.15},"visibility":4000,"wind":{"speed":2.85,"deg":315},"clouds":{"all":75},"dt":1573043921,"sys":{"type":1,"id":9049,"country":"IN","sunrise":1573003031,"sunset":1573043362},"timezone":19800,"id":1279233,"name":"Ahmedabad","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B20&", "&E20&"' City Info", Bhubaneswar, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-1067936865" onClick='toggleBox("Output-1067936865", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1067936865" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1067936865">
+Test_Case_Name is : "Verify '"&B20&", "&E20&"' City Info"<br/>
+Response is : {"coord":{"lon":85.84,"lat":20.26},"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50n"}],"base":"stations","main":{"temp":300.15,"pressure":1008,"humidity":65,"temp_min":300.15,"temp_max":300.15},"visibility":2000,"wind":{"speed":1.5,"deg":50},"clouds":{"all":40},"dt":1573044185,"sys":{"type":1,"id":9113,"country":"IN","sunrise":1572999633,"sunset":1573040395},"timezone":19800,"id":1275817,"name":"Bhubaneswar","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B21&", "&E21&"' City Info", Chennai, 17e5c69afcef0f16365a6c3b0cba4400, 200, IN<br/>
+<a href="#Output-103394942" onClick='toggleBox("Output-103394942", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-103394942" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-103394942">
+Test_Case_Name is : "Verify '"&B21&", "&E21&"' City Info"<br/>
+Response is : {"coord":{"lon":80.28,"lat":13.09},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":302.86,"pressure":1007,"humidity":66,"temp_min":302.59,"temp_max":303.15},"visibility":2500,"wind":{"speed":1.5,"deg":60},"clouds":{"all":20},"dt":1573044126,"sys":{"type":1,"id":9218,"country":"IN","sunrise":1573000442,"sunset":1573042255},"timezone":19800,"id":1264527,"name":"Chennai","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B22&", "&E22&"' City Info", Texas, 17e5c69afcef0f16365a6c3b0cba4400, 200, AU<br/>
+<a href="#Output-1318080469" onClick='toggleBox("Output-1318080469", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1318080469" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1318080469">
+Test_Case_Name is : "Verify '"&B22&", "&E22&"' City Info"<br/>
+Response is : {"coord":{"lon":151.17,"lat":-28.86},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"model","main":{"temp":289.78,"pressure":1013,"humidity":26,"temp_min":289.78,"temp_max":289.78,"sea_level":1013,"grnd_level":967},"wind":{"speed":2.47,"deg":202},"clouds":{"all":0},"dt":1573044185,"sys":{"country":"AU","sunrise":1572980347,"sunset":1573028322},"timezone":36000,"id":2160132,"name":"Texas","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B23&", "&E23&"' City Info", Chicago, 17e5c69afcef0f16365a6c3b0cba4400, 200, US<br/>
+<a href="#Output-1490434838" onClick='toggleBox("Output-1490434838", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1490434838" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1490434838">
+Test_Case_Name is : "Verify '"&B23&", "&E23&"' City Info"<br/>
+Response is : {"coord":{"lon":-87.62,"lat":41.88},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04d"}],"base":"stations","main":{"temp":274.63,"pressure":1028,"humidity":74,"temp_min":273.71,"temp_max":275.37},"visibility":16093,"wind":{"speed":3.6,"deg":170},"clouds":{"all":90},"dt":1573044121,"sys":{"type":1,"id":4505,"country":"US","sunrise":1573043326,"sunset":1573079966},"timezone":-21600,"id":4887398,"name":"Chicago","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B24&", "&E24&"' City Info", Houston, 17e5c69afcef0f16365a6c3b0cba4400, 200, US<br/>
+<a href="#Output-1948835427" onClick='toggleBox("Output-1948835427", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1948835427" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1948835427">
+Test_Case_Name is : "Verify '"&B24&", "&E24&"' City Info"<br/>
+Response is : {"coord":{"lon":-95.37,"lat":29.76},"weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02d"}],"base":"stations","main":{"temp":289.57,"pressure":1023,"humidity":82,"temp_min":287.59,"temp_max":291.48},"visibility":16093,"wind":{"speed":2.32,"deg":100},"clouds":{"all":20},"dt":1573043987,"sys":{"type":1,"id":4850,"country":"US","sunrise":1573043925,"sunset":1573083087},"timezone":-21600,"id":4699066,"name":"Houston","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '" & B25 &  ", "&E25 & "' City Info", Los Angeles, 17e5c69afcef0f16365a6c3b0cba4400, 200, US<br/>
+<a href="#Output-745465688" onClick='toggleBox("Output-745465688", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-745465688" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-745465688">
+Test_Case_Name is : "Verify '" & B25 &  ", "&E25 & "' City Info"<br/>
+Response is : {"coord":{"lon":-118.24,"lat":34.05},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":285.63,"pressure":1015,"humidity":38,"temp_min":282.04,"temp_max":289.15},"visibility":6437,"wind":{"speed":0.99,"deg":183},"clouds":{"all":1},"dt":1573044126,"sys":{"type":1,"id":3578,"country":"US","sunrise":1573049820,"sunset":1573088170},"timezone":-28800,"id":5368361,"name":"Los Angeles","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B26&", "&E26&"' City Info", Philadelphia, 17e5c69afcef0f16365a6c3b0cba4400, 200, US<br/>
+<a href="#Output-482987954" onClick='toggleBox("Output-482987954", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-482987954" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-482987954">
+Test_Case_Name is : "Verify '"&B26&", "&E26&"' City Info"<br/>
+Response is : {"coord":{"lon":-75.16,"lat":39.95},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":277.2,"pressure":1029,"humidity":80,"temp_min":274.15,"temp_max":280.37},"visibility":16093,"wind":{"speed":1.5,"deg":210},"clouds":{"all":1},"dt":1573043911,"sys":{"type":1,"id":4743,"country":"US","sunrise":1573040103,"sunset":1573077208},"timezone":-18000,"id":4560349,"name":"Philadelphia","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '" & B27 &  ", "&E27 & "' City Info", Manchester, 17e5c69afcef0f16365a6c3b0cba4400, 200, US<br/>
+<a href="#Output-1022251996" onClick='toggleBox("Output-1022251996", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1022251996" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1022251996">
+Test_Case_Name is : "Verify '" & B27 &  ", "&E27 & "' City Info"<br/>
+Response is : {"coord":{"lon":-71.45,"lat":43},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":275.84,"pressure":1024,"humidity":74,"temp_min":272.59,"temp_max":278.71},"visibility":16093,"wind":{"speed":1.5},"rain":{},"clouds":{"all":1},"dt":1573044187,"sys":{"type":1,"id":4895,"country":"US","sunrise":1573039582,"sunset":1573075948},"timezone":-18000,"id":5089178,"name":"Manchester","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B28&", "&E28&"' City Info", London, 17e5c69afcef0f16365a6c3b0cba4400, 200, GB<br/>
+<a href="#Output-1844700236" onClick='toggleBox("Output-1844700236", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1844700236" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1844700236">
+Test_Case_Name is : "Verify '"&B28&", "&E28&"' City Info"<br/>
+Response is : {"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":281.91,"pressure":1005,"humidity":70,"temp_min":280.15,"temp_max":283.71},"visibility":10000,"wind":{"speed":1},"rain":{},"clouds":{"all":2},"dt":1573043820,"sys":{"type":1,"id":1414,"country":"GB","sunrise":1573023728,"sunset":1573057567},"timezone":0,"id":2643743,"name":"London","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B29&", "&E29&"' City Info", Edinburgh, 17e5c69afcef0f16365a6c3b0cba4400, 200, GB<br/>
+<a href="#Output-197195067" onClick='toggleBox("Output-197195067", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-197195067" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-197195067">
+Test_Case_Name is : "Verify '"&B29&", "&E29&"' City Info"<br/>
+Response is : {"coord":{"lon":-3.19,"lat":55.95},"weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02d"}],"base":"stations","main":{"temp":279.5,"pressure":1002,"humidity":87,"temp_min":278.71,"temp_max":280.37},"visibility":10000,"wind":{"speed":3.1,"deg":60},"clouds":{"all":20},"dt":1573044035,"sys":{"type":1,"id":1442,"country":"GB","sunrise":1573025358,"sunset":1573057406},"timezone":0,"id":2650225,"name":"Edinburgh","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B30&", "&E30&"' City Info", Birmingham, 17e5c69afcef0f16365a6c3b0cba4400, 200, US<br/>
+<a href="#Output-377942196" onClick='toggleBox("Output-377942196", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-377942196" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-377942196">
+Test_Case_Name is : "Verify '"&B30&", "&E30&"' City Info"<br/>
+Response is : {"coord":{"lon":-86.8,"lat":33.52},"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50d"}],"base":"stations","main":{"temp":280.8,"pressure":1028,"humidity":100,"temp_min":277.15,"temp_max":284.15},"visibility":8047,"wind":{"speed":1.66,"deg":43},"clouds":{"all":0},"dt":1573044028,"sys":{"type":1,"id":5371,"country":"US","sunrise":1573042218,"sunset":1573080680},"timezone":-21600,"id":4049979,"name":"Birmingham","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+<tr>
+<td title='com.Test.apiTest.DataProviderWeatherAPI.getWeatherInfoWithPositiveTestCases()'><b>getWeatherInfoWithPositiveTestCases</b><br>Test class: com.Test.apiTest.DataProviderWeatherAPI<br>Parameters: "Verify '"&B31&", "&E31&"' City Info", Glasgow, 17e5c69afcef0f16365a6c3b0cba4400, 200, GB<br/>
+<a href="#Output-123629835" onClick='toggleBox("Output-123629835", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-123629835" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-123629835">
+Test_Case_Name is : "Verify '"&B31&", "&E31&"' City Info"<br/>
+Response is : {"coord":{"lon":-4.24,"lat":55.86},"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"base":"stations","main":{"temp":279.52,"pressure":1002,"humidity":81,"temp_min":278.71,"temp_max":280.37},"visibility":10000,"wind":{"speed":2.6,"deg":90},"rain":{"3h":0.13},"clouds":{"all":100},"dt":1573044144,"sys":{"type":1,"id":1441,"country":"GB","sunrise":1573025590,"sunset":1573057678},"timezone":0,"id":2648579,"name":"Glasgow","cod":200}<br/>
+Verified the status code successfully<br/>
+Country Code has Verified Sucessfully<br/>
+CityName has Verified Sucessfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Test.apiTest.DataProviderWeatherAPI@26653222</td></tr>
+</table><p>
+</body>
+</html>
